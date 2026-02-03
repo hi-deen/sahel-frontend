@@ -1,40 +1,41 @@
-import React from 'react';
-
 const services = [
   {
-    title: "Sourcing & Procurement",
-    text: "We identify, evaluate, and procure goods from reliable local and international suppliers with transparency and efficiency."
+    title: 'Sourcing & Procurement',
+    text: 'Strategic sourcing of quality goods from verified suppliers across local and international markets.'
   },
   {
-    title: "Import / Export",
-    text: "End-to-end coordination of cross-border trade, documentation, compliance, and logistics."
+    title: 'Import & Export',
+    text: 'Facilitating compliant cross-border trade, logistics coordination, and documentation support.'
   },
   {
-    title: "Distribution",
-    text: "Structured distribution of goods across regions through vetted logistics and partner networks."
+    title: 'Distribution',
+    text: 'Reliable product distribution to wholesalers, retailers, institutions, and project sites.'
   },
   {
-    title: "Consulting",
-    text: "Procurement strategy, supplier evaluation, cost optimization, and market intelligence advisory."
+    title: 'Consulting',
+    text: 'Procurement advisory, market intelligence, and supply-chain optimization services.'
   },
   {
-    title: "Supplier Vetting",
-    text: "Verification, due diligence, and performance assessment of suppliers and manufacturers."
+    title: 'Supplier Vetting',
+    text: 'Background checks, quality assurance, and risk evaluation of suppliers and manufacturers.'
   }
 ];
 
-const Services: React.FC = () => {
+export default function Services() {
   return (
     <div className="container py-5">
-      <h2 className="mb-4">Our Services</h2>
+      <h1 className="fw-bold text-center mb-4">Our Services</h1>
+      <p className="text-center text-muted mb-5">
+        End-to-end procurement and trade solutions tailored to your needs.
+      </p>
 
       <div className="row g-4">
-        {services.map((s, idx) => (
-          <div className="col-md-4" key={idx}>
+        {services.map((service, i) => (
+          <div key={i} className="col-md-6 col-lg-4">
             <div className="card h-100 shadow-sm">
               <div className="card-body">
-                <h5 className="card-title">{s.title}</h5>
-                <p className="card-text">{s.text}</p>
+                <h5 className="card-title fw-semibold">{service.title}</h5>
+                <p className="card-text mt-2">{service.text}</p>
               </div>
             </div>
           </div>
@@ -42,6 +43,4 @@ const Services: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Services;
+}

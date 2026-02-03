@@ -22,21 +22,7 @@ function App() {
     <BrowserRouter>
 
     <Navbar />
-
-      {/* <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-        <div className="container">
-          <Link className="navbar-brand fw-bold" to="/">Sahel Hive</Link>
-          <div className="collapse navbar-collapse">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item"><Link className="nav-link" to="/services">Services</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/industries">Industries</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/how">How it works</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/profile">Corporate Profile</Link></li>
-            </ul>
-          </div>
-        </div>
-      </nav> */}
-
+    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
@@ -45,7 +31,9 @@ function App() {
         <Route path="/profile" element={<CorporateProfile />} />
       </Routes>
 
-      <ChatWidget />  
+      <ChatWidget />
+
+      <Footer />
     </BrowserRouter>
   );
 }

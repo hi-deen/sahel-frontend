@@ -1,46 +1,40 @@
-import React from 'react';
-
 const steps = [
   {
-    title: "Discover",
-    text: "We understand your requirements, timelines, and compliance needs."
+    title: 'Discover',
+    text: 'Understand client needs, specifications, timelines, and budget.'
   },
   {
-    title: "Source",
-    text: "We identify and verify suppliers that meet quality and cost benchmarks."
+    title: 'Source',
+    text: 'Identify and vet reliable suppliers and manufacturers.'
   },
   {
-    title: "Procure",
-    text: "Contracts, documentation, and transactions are handled transparently."
+    title: 'Procure',
+    text: 'Negotiate pricing, manage documentation, and execute procurement.'
   },
   {
-    title: "Deliver",
-    text: "Logistics coordination and delivery tracking until final handover."
+    title: 'Deliver',
+    text: 'Coordinate logistics and ensure timely, compliant delivery.'
   }
 ];
 
-const HowItWorks: React.FC = () => {
+export default function HowItWorks() {
   return (
     <div className="container py-5">
-      <h2 className="mb-5">How It Works</h2>
+      <h1 className="fw-bold text-center mb-5">How It Works</h1>
 
-      <div className="row text-center g-4">
-        {steps.map((step, idx) => (
-          <div className="col-md-3" key={idx}>
-            <div className="p-4 border rounded h-100">
-              <div className="mb-3">
-                <span className="badge bg-primary rounded-circle p-3">
-                  {idx + 1}
-                </span>
+      <div className="row g-4">
+        {steps.map((step, i) => (
+          <div key={i} className="col-md-3">
+            <div className="text-center p-4 border rounded h-100">
+              <div className="display-6 fw-bold text-primary mb-2">
+                {i + 1}
               </div>
-              <h5>{step.title}</h5>
-              <p className="text-muted">{step.text}</p>
+              <h5 className="fw-semibold">{step.title}</h5>
+              <p className="mt-2">{step.text}</p>
             </div>
           </div>
         ))}
       </div>
     </div>
   );
-};
-
-export default HowItWorks;
+}

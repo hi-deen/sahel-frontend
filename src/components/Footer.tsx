@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-dark text-light py-4 mt-5">
       <div className="container text-center">
         <p className="mb-1 fw-semibold">
-          Sahel Hive Tradelinks Limited
+          Sahel Hive Tradelink
         </p>
         <small>
           Remote-First Procurement & Marketing Company <br />
